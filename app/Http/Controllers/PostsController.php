@@ -91,7 +91,7 @@ class PostsController extends Controller
     {
         //
         $post=Post::find($id);
-        return view('posts.post')->with('post',$post);
+        return view('posts.post')->with('post',$post)->with('recipeId', $id);
         
         
     }
@@ -109,6 +109,7 @@ class PostsController extends Controller
         $post=Post::find($id);
         if($post->user->id == auth()->user()->id)
         return view('posts.edit')->with('post',$post);
+
 
         else
         
