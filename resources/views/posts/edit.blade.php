@@ -2,6 +2,10 @@
 
 @section('content')
 <br>
+@extends('layout.app')
+
+@section('content')
+<br>
 {!! Form::open(['action' => ['PostsController@update',$post->id]]) !!}
     
 <div class="form-group">
@@ -21,6 +25,13 @@
 
 
 {!! Form::close() !!}
+
+
+
+
+
+
+@endsection
 
 
 
